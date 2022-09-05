@@ -23,7 +23,7 @@ folder="/tmp/$RANDOM"
 git clone https://github.com/aws-samples/aws-iot-securetunneling-localproxy "$folder"
 cd "$folder"
 ./docker-build.sh
-docker build aws-iot-securetunneling-localproxy "$image:$tag"
+docker tag aws-iot-securetunneling-localproxy "$image:$tag"
 
 if [ $copy -eq 0 ]; then exit; fi
 
